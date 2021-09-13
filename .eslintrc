@@ -1,0 +1,15 @@
+{
+    "extends": ["next", "next/core-web-vitals"],
+    "plugins": ["prettier"],
+    "rules": {
+        // "prettier/prettier": "error",
+        "@next/next/no-img-element": "off"
+        // "react/prop-types": "off",
+        // "react/react-in-jsx-scope": "off"
+        //"indent": ["error", 4],
+        //"linebreak-style": ["error", "windows"],
+        //"quotes": ["error", "single"],
+        //"semi": ["error", "always"]
+        // "react-hooks/exhaustive-deps": "off"
+    }
+}
