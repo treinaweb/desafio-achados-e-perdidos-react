@@ -1,17 +1,9 @@
 import React, { useEffect, useReducer } from 'react';
 import produce from 'immer';
-import { UserInterface, UserType } from 'data/@types/UserInterface';
+import { UserInterface } from 'data/@types/UserInterface';
 import { LoginService } from 'data/services/LoginService';
-import useApi from 'data/hooks/useApi.hook';
-import {
-    CidadeInterface,
-    EnderecoInterface,
-} from 'data/@types/EnderecoInterface';
-import { ApiService, linksResolver } from 'data/services/ApiService';
-import {
-    EstablishmentInterface,
-    LocationInterface,
-} from 'data/@types/LocationInterface';
+
+import { LocationInterface } from 'data/@types/LocationInterface';
 import { ApiLinksInterface } from 'data/@types/ApiLinksInterface';
 
 export const initialState = {
@@ -68,14 +60,10 @@ const reducer = (
                 draftState.userLinks = action.payload as ApiLinksInterface[];
                 break;
             case 'SET_ESTABLISHMENT':
-                draftState.user = (
-                    action.payload as EstablishmentInterface
-                ).usuario;
-                draftState.location = (
-                    action.payload as EstablishmentInterface
-                ).local;
+                draftState.user = (action.payload as LocationInterface).usuario;
+                draftState.location = action.payload as LocationInterface;
                 draftState.userLinks = (
-                    action.payload as EstablishmentInterface
+                    action.payload as LocationInterface
                 ).links;
                 draftState.isLogging = false;
                 break;

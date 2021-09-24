@@ -1,10 +1,10 @@
 import { CadastroLocalFormInterface } from 'data/@types/FormInterface';
 import { ApiServiceHateoas } from 'data/services/ApiService';
-import { FieldPath, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useContext } from 'react';
 import { ExternalServicesContext } from 'data/contexts/ExternalServicesContext';
 import { UserContext } from 'data/contexts/UserContext';
-import { EstablishmentInterface } from 'data/@types/LocationInterface';
+import { LocationInterface } from 'data/@types/LocationInterface';
 import { LoginService } from 'data/services/LoginService';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { FormSchemaService } from 'data/services/FormSchemaService';
@@ -22,7 +22,7 @@ export function useCadastroUsuario() {
         ApiServiceHateoas(externalServices, 'criar_local', async (request) => {
             try {
                 const establishment = (
-                    await request<EstablishmentInterface>({ data })
+                    await request<LocationInterface>({ data })
                 ).data;
 
                 await LoginService.login({
@@ -50,7 +50,7 @@ export function useCadastroUsuario() {
         });
     }
 
-    function savePicture(newEstablishment: EstablishmentInterface) {
+    function savePicture(newEstablishment: LocationInterface) {
         ApiServiceHateoas(
             newEstablishment.links,
             'definir_imagem_local',

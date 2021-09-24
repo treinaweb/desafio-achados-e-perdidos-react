@@ -1,5 +1,5 @@
 import { LoginFormDataInterface } from 'data/@types/FormInterface';
-import { EstablishmentInterface } from 'data/@types/LocationInterface';
+import { LocationInterface } from 'data/@types/LocationInterface';
 import { ApiService } from './ApiService';
 import { LocalStorage } from './StorageService';
 
@@ -26,11 +26,11 @@ export const LoginService = {
         LocalStorage.clear('token');
         LocalStorage.clear('token_refresh');
     },
-    async getEstablishment(): Promise<EstablishmentInterface | undefined> {
+    async getEstablishment(): Promise<LocationInterface | undefined> {
         const token = LocalStorage.get('token', '');
         if (token) {
             ApiService.defaults.headers['Authorization'] = 'Bearer ' + token;
-            return (await ApiService.get<EstablishmentInterface>('/api/locais'))
+            return (await ApiService.get<LocationInterface>('/api/locais'))
                 .data;
         }
         return undefined;

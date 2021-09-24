@@ -8,10 +8,6 @@ export interface LocationInterface {
     contato: string;
     descricao: string;
     imagem?: string;
-}
-
-export interface EstablishmentInterface {
-    local: LocationInterface;
-    usuario: UserInterface;
     links: ApiLinksInterface[];
+    usuario: UserInterface;
 }
