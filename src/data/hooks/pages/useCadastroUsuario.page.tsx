@@ -22,7 +22,12 @@ export function useCadastroUsuario() {
         ApiServiceHateoas(externalServices, 'criar_local', async (request) => {
             try {
                 const establishment = (
-                    await request<LocationInterface>({ data })
+                    await request<LocationInterface>({
+                        data: {
+                            ...data.local,
+                            usuario: data.usuario,
+                        },
+                    })
                 ).data;
 
                 await LoginService.login({
