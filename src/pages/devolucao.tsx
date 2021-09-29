@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import { FormProvider, useForm } from 'react-hook-form';
-import { Container, Paper } from '@material-ui/core';
+import { Container, Paper } from '@mui/material';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import {
     FormButtonSubmit,

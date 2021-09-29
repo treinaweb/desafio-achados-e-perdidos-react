@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid, Typography, Skeleton } from '@material-ui/core';
+import { Button, Grid, Typography, Skeleton } from '@mui/material';
 import { UserAvatar, AvatarIcon } from './UserProfileAvatar.style';
 import { UserInterface } from 'data/@types/UserInterface';
 

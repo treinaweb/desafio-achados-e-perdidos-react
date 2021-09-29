@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Typography } from '@mui/material';
 import ListItem, {
     ItemsList,
 } from 'ui/components/data-display/ListItem/ListItem';

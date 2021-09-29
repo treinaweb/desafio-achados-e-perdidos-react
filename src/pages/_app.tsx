@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import Head from 'next/head';
-import { CircularProgress, Container, ThemeProvider } from '@material-ui/core';
+import { CircularProgress, Container, ThemeProvider } from '@mui/material';
 
 import '@styles/globals.css';
 import { AppContainer } from '@styles/pages/_app.styled';

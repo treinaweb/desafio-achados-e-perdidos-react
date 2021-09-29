@@ -1,4 +1,4 @@
-import { styled } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 import {
     Dialog as MuiDialog,
     DialogTitle as MuiDialogTitle,
@@ -6,7 +6,7 @@ import {
     DialogActions as MuiDialogActions,
     IconButton as MuiIconButton,
     Divider,
-} from '@material-ui/core';
+} from '@mui/material';
 import { DialogProps } from './Dialog';
 
 export const DialogContainer = styled(MuiDialog)``;

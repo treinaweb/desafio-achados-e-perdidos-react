@@ -1,6 +1,6 @@
-import { Button } from '@material-ui/core';
-import { styled } from '@material-ui/core/styles';
-// import {  } from '@material-ui/core';
+import { Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
+// import {  } from '@mui/material';
 // import { ListItemProps } from './ListItem';
 
 export const ItemsList = styled('ul')`

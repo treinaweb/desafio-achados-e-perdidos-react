@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { Button, Container } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Button, Container } from '@mui/material';
 import { UserFormProps } from './UserForm';
 
 export const FormTitle = styled('h3')`

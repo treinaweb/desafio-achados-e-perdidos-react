@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import { FormProvider, useForm } from 'react-hook-form';
-import { Container, Paper, Snackbar, Typography } from '@material-ui/core';
+import { Container, Paper, Snackbar, Typography, Box } from '@mui/material';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import {
     FormButtonSubmit,
@@ -12,7 +12,6 @@ import {
     AdminForm,
     LocationForm,
 } from 'ui/components/inputs/UserForm/UserForm';
-import { Box } from '@material-ui/system';
 import { useAlterarCadastro } from 'data/hooks/pages/useAlterarCadastro.page';
 import Dialog from 'ui/components/feedback/Dialog/Dialog';
 

@@ -2,10 +2,10 @@ import {
     FormControl,
     InputLabel,
     SelectProps as MuiSelectProps,
-} from '@material-ui/core';
+} from '@mui/material';
 import { v4 as uuid } from 'uuid';
 import React, { useEffect, useState } from 'react';
-// import {  } from '@material-ui/core';
+// import {  } from '@mui/material';
 import { SelectStyled } from './Select.style';
 
 export interface SelectProps extends MuiSelectProps {

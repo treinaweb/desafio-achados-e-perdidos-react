@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import { LoginForm } from 'ui/components/inputs/UserForm/UserForm';
 import { FormProvider, useForm } from 'react-hook-form';
-import { Container } from '@material-ui/core';
+import { Container } from '@mui/material';
 import {
     FormButtonSubmit,
     FormContainerStyled,

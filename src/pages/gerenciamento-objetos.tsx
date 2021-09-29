@@ -1,13 +1,12 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
-import { Button, Container, Snackbar, Typography } from '@material-ui/core';
+import { Button, Container, Snackbar, Typography, Box } from '@mui/material';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import Table, {
     TableCell,
     TableRow,
 } from 'ui/components/data-display/Table/Table';
 import Link from 'ui/components/navigation/Link/Link';
-import { Box } from '@material-ui/system';
 import useGerenciamentoObjetos from 'data/hooks/pages/useGerenciamentoObjetos.page';
 import Dialog from 'ui/components/feedback/Dialog/Dialog';
 import {

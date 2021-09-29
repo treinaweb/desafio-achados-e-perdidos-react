@@ -1,6 +1,6 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
-import { Container, Paper, Typography } from '@material-ui/core';
+import { Container, Paper, Box  } from '@mui/material';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import {
     AdminForm,
@@ -12,7 +12,6 @@ import {
     FormContainerStyled,
     FormTitle,
 } from 'ui/components/inputs/UserForm/UserForm.style';
-import { Box } from '@material-ui/system';
 import { useCadastroUsuario } from 'data/hooks/pages/useCadastroUsuario.page';
 
 // import { Component } from '@styles/pages/cadastro-usuario.styled';

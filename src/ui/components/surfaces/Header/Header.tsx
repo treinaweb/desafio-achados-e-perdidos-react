@@ -9,7 +9,8 @@ import {
     Button,
     useTheme,
     useMediaQuery,
-} from '@material-ui/core';
+    Box
+} from '@mui/material';
 import {
     HeaderAppBar,
     HeaderLogo,
@@ -21,7 +22,6 @@ import UserHeaderMenu from 'ui/components/navigation/UserHeaderMenu/UserHeaderMe
 import UserProfileAvatar from 'ui/components/data-display/UserProfileAvatar/UserProfileAvatar';
 import { UserInterface } from 'data/@types/UserInterface';
 import useIsMobile from 'data/hooks/useIsMobile';
-import { Box } from '@material-ui/system';
 
 export interface HeaderProps {
     children?: React.ReactNode;

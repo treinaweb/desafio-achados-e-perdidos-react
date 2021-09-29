@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState, useRef, useEffect } from 'react';
 import TextField from '../TextField/TextField';
-import { TextFieldProps } from '@material-ui/core';
+import { TextFieldProps } from '@mui/material';
 import { FileContainer, UploadIcon } from './FileField.style';
 
 export interface FileFieldProps extends Omit<TextFieldProps, 'onChange'> {

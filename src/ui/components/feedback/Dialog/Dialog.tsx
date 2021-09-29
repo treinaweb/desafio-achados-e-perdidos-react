@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, useMediaQuery, useTheme } from '@material-ui/core';
+import { Button, useMediaQuery, useTheme } from '@mui/material';
 import {
     DialogContainer,
     DialogTitle,

@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { LinearProgress, Theme, Typography } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { LinearProgress, Theme, Typography } from '@mui/material';
 
 import { PasswordStrengthProps } from './PasswordStrength';
 

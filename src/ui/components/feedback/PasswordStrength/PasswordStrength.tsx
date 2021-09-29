@@ -1,7 +1,7 @@
-import { LinearProgress, Typography } from '@material-ui/core';
+import { LinearProgress, Typography } from '@mui/material';
 import React, { useMemo } from 'react';
 import { passwordStrength } from 'check-password-strength';
-// import {  } from '@material-ui/core';
+// import {  } from '@mui/material';
 import {
     PasswordStrengthBar,
     PasswordStrengthLabel,

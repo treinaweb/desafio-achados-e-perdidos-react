@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, Divider } from '@material-ui/core';
+import { Button, Divider } from '@mui/material';
 import { UserHeaderMenuContainer, UserMenu } from './UserHeaderMenu.style';
 import UserProfileAvatar from 'ui/components/data-display/UserProfileAvatar/UserProfileAvatar';
 import Link from 'ui/components/navigation/Link/Link';

@@ -5,7 +5,7 @@ import {
     Link as MuiLink,
     LinkProps as MuiLinkProps,
     ButtonProps,
-} from '@material-ui/core';
+} from '@mui/material';
 // import { Component } from './Link.style';
 
 export interface LinkProps {
