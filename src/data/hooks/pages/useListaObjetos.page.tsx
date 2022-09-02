@@ -10,7 +10,9 @@ export default function useListaObjetos() {
         { externalServicesState } = useContext(ExternalServicesContext),
         [objectsList, setLocationList] = useState<LocationListItemInterface[]>(
             [] as LocationListItemInterface[]
-        );
+        ),
+        [openModal, setOpenModal] = useState(false),
+        [dataObj, setDataObj] = useState<LocationListItemInterface>();
 
     useEffect(() => {
         (async () => {
@@ -23,8 +25,20 @@ export default function useListaObjetos() {
         })();
     }, [externalServicesState.externalServices, id]);
 
+    function selectContactModal(data?: LocationListItemInterface) {
+        if (data) {
+            setDataObj(data);
+            setOpenModal(true);
+            return;
+        }
+        setOpenModal(false);
+    }
+
     return {
         objectsList,
         locationName,
+        dataObj,
+        openModal,
+        selectContactModal,
     };
 }

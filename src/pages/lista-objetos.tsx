@@ -6,6 +6,8 @@ import ListItem, {
     ItemsList,
 } from 'ui/components/data-display/ListItem/ListItem';
 import useListaObjetos from 'data/hooks/pages/useListaObjetos.page';
+import { TextFormatService } from 'data/services/TextFormatService';
+import Dialog from 'ui/components/feedback/Dialog/Dialog';
 
 // import { Component } from '@styles/pages/lista-objetos.styled';
 
@@ -18,7 +20,13 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const ListaObjetos: React.FC = () => {
-    const { objectsList, locationName } = useListaObjetos();
+    const {
+        objectsList,
+        locationName,
+        dataObj,
+        selectContactModal,
+        openModal,
+    } = useListaObjetos();
     return (
         <Container maxWidth={'md'}>
             <PageTitle
@@ -33,16 +41,19 @@ const ListaObjetos: React.FC = () => {
                     {objectsList.map((obj, index) => (
                         <ListItem
                             key={index}
-                            name={'Nome do objeto'}
+                            name={obj.nome}
                             description={
                                 <>
-                                    Descrição do objeto <br />
-                                    Encontrado em: 00/00/0000
+                                    {obj.descricao} <br />
+                                    Encontrado em:{' '}
+                                    {TextFormatService.reverseDate(
+                                        obj.data_cadastro
+                                    )}
                                 </>
                             }
                             picture={obj.imagem || ''}
                             actionLabel={'Entrar em contato'}
-                            onClick={() => {}}
+                            onClick={() => selectContactModal(obj)}
                         />
                     ))}
                 </ItemsList>
@@ -51,6 +62,18 @@ const ListaObjetos: React.FC = () => {
                     Nenhum objeto encontrado aqui
                 </Typography>
             )}
+
+            <Dialog
+                isOpen={openModal}
+                onClose={() => selectContactModal()}
+                title={'Contato'}
+                noCancel
+                noConfirm
+            >
+                {TextFormatService.formatPhoneNumberWithTypeNumber(
+                    dataObj?.contato!
+                )}
+            </Dialog>
         </Container>
     );
 };

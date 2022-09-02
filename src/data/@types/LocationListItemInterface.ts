@@ -8,4 +8,5 @@ export interface LocationListItemInterface {
     imagem?: string;
     links: ApiLinksInterface[];
     nome: string;
+    data_cadastro: string;
 }
