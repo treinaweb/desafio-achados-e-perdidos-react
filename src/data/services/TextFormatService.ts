@@ -70,14 +70,12 @@ export const TextFormatService = {
     formatPhoneNumberWithTypeNumber(phoneNumber: string): string {
         try {
             const [typeNumber, number] = phoneNumber.split(':');
-            const match = number
-                .replaceAll(' ', '')
-                .match(/^(\d{2})(\d{5})(\d{4})/);
-            if (match) {
-                const [_, ddd, n1, n2] = match;
-                return `${typeNumber}: (${ddd}) ${n1}-${n2}`;
-            }
-            return `${typeNumber}: ${number}`;
+
+            const numberFormat = this.formatPhoneNumber(
+                number.replaceAll(' ', '')
+            );
+
+            return `${typeNumber}: ${numberFormat}`;
         } catch (error) {
             return phoneNumber;
         }
